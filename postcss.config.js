@@ -3,18 +3,21 @@ const purgecss = require('@fullhuman/postcss-purgecss').default;
 module.exports = {
   plugins: [
     purgecss({
-      content: ['./*.html'],
-      safelist: [
-        /^col/,           // préserve toutes les classes col-*, col-sm-*, etc.
-        /^row/,           // .row
-        /^container/,     // .container, .container-fluid
-        /^modal/,         // .modal, .modal-content...
-        /^btn/,           // .btn, .btn-primary...
-        /^show/,          // pour les modales ouvertes dynamiquement
-        /^collapse/,      // pour les menus déroulants
-        /^navbar/,        // si tu utilises une navbar
-        /^alert/,         // si tu as des messages d'alerte
-      ]
+      content: ['./*.html', './**/*.js'],
+      safelist: {
+        standard: [
+          /^container/,   // .container, .container-fluid
+          /^row/,         // .row
+          /^col/,         // .col-*, .col-sm-*, etc.
+          /^img/,         // .img-fluid
+          /^mb-/, /^mt-/, /^ml-/, /^mr-/, /^p[trblxy]-/, // marges & paddings
+          /^nav/,         // .nav, .nav-link, .nav-pills
+          /^modal/,       // .modal-*, pour lightbox
+          /^show/,        // .show utilisé pour modale visible
+          /^active/,      // .active pour boutons ou tags actifs
+          /^d-/,          // .d-flex, .d-none, etc.
+        ]
+      }
     })
   ]
 }
