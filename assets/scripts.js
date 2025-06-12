@@ -13,4 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tagsPosition: 'top'
     });
   }
-});
+}
+
+
+);

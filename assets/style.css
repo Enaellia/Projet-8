@@ -42,6 +42,7 @@ body {
 
 .social-link img {
 	width: 20px;
+	height: 20px;
 }
 
 #about {
@@ -70,12 +71,12 @@ body {
 }
 
 img.d-block.w-100 {
-  aspect-ratio: 4 / 2; 
+	aspect-ratio: 4 / 2;
 }
 
 .picture img {
-	width: 100%;
-
+	width: 560px;
+	height: 560px;
 }
 
 #about-me {
@@ -114,9 +115,13 @@ img.d-block.w-100 {
 	justify-content: center;
 }
 
+.visually-hidden {
+	color: #000;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-	color: #fff;
+	color: #000;
 	background-color: #BEB45A;
 	border-radius: 0;
 }
